@@ -1,0 +1,280 @@
+.placing-order {
+
+    // .placing-order__container
+
+    &__container {
+    }
+
+    // .placing-order__title
+
+    &__title {
+    }
+
+    // .placing-order__wrapper
+
+    .placing-order-wrapper {
+        display: flex;
+
+        @media screen and (max-width: 991.98px) {
+            flex-direction: column;
+            
+        }
+
+        // .placing-order-wrapper__block-form
+    
+        &__block-form {
+            margin-right: 30px;
+            padding: 40px;
+            border: 1px solid #DEDFE7;
+            border-radius: 8px;
+            font-size: 14px;
+
+            @media screen and (max-width: 991.98px) {
+                padding: 20px;
+                margin-bottom: 40px;
+                margin-right: 0px;
+            }
+        }
+    
+        // .placing-order-wrapper__title
+    
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    
+        // .placing-order-wrapper__form
+    
+        .placing-order-form {
+            
+    
+            // .placing-order-form__inner
+        
+            &__inner {
+                display: flex;
+                flex-wrap: wrap;
+                color: #DEDFE7;
+            }
+        
+            // .placing-order-form__item
+        
+            &__item {
+                max-width: 47%;
+                width: 100%;
+                margin-right: 20px;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 1199.98px) {
+                    margin-right: 0;
+                    max-width: 100%;
+                }
+
+                & input {
+                    width: 100%;
+                    padding: 15px;
+                    border: 1px solid #DEDFE7;
+                    border-radius: 8px;
+                    outline: none;
+                    font-size: 14px;
+                    transition: all 0.3s;
+
+                    &.error {
+                        border-color: #FD1D1D;
+                        animation: shake 0.2s 2;
+
+                        &:not(:placeholder-shown) {
+                            border-color: #FD1D1D;
+                        }
+                    }
+
+                    &:not(:placeholder-shown) {
+                        border-color: #000;
+                    }
+
+                    &:focus {
+                        border-color: #000;
+                    }
+                }
+
+                &.text {
+                    max-width: 100%;
+                    & textarea {
+                        width: 100%;
+                        height: 160px;
+                        font-size: 14px;
+                        padding: 15px;
+                        border: 1px solid #DEDFE7;
+                        border-radius: 8px;
+                        outline: none;
+                        resize: vertical;
+                        transition: all 0.3s;
+
+                        @media screen and (max-width: 575.98px) {
+                            height: 200px;
+                        }
+
+                        &:not(:placeholder-shown) {
+                            border-color: #000;
+                        }
+
+                        &:focus {
+                            border-color: #000;
+                        }
+                    }
+                }
+            }
+        
+            // .placing-order-form__variants
+        
+            & .variants {
+                color: #DEDFE7;
+    
+                // .variants__item
+            
+                &__item {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            
+                // .variants__label
+            
+                &__label {
+                    width: 160px;
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+
+                & select {
+                    max-width: 390px;
+                    width: 100%;
+                    font-size: 14px;
+                    padding: 15px;
+                    border: 1px solid #DEDFE7;
+                    border-radius: 8px;
+                    margin-bottom: 40px;
+                    outline: none;
+
+                    &:focus {
+                        border-color: #000;
+                    }
+
+                    @media screen and (max-width: 1199.98px) {
+                        max-width: 100%;
+                    }
+                }
+            }
+            & .checkboxs {
+                margin-bottom: 40px;
+            
+                // .checkboxs__item
+            
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    
+
+                    & input {
+                        display: none;
+                    }
+                }
+            
+                // .checkboxs__label
+            
+                &__label {
+                    margin-right: 10px;
+                    & .offers {
+                        color: #000;
+                    }
+                }
+            }
+        
+            // .placing-order-form__btn
+        
+            &__btn {
+                max-width: 345px;
+                width: 100%;
+                text-align: center;
+                border: 1px solid #DEDFE7;
+                border-radius: 8px;
+                background: #DEDFE7;
+                padding: 23px;
+                margin-bottom: 10px;
+                margin-right: 20px;
+                color: #A3A6B2;
+                pointer-events: none;
+
+                &.red-btn {
+                    pointer-events: auto;  
+                    border: 1px solid #E30613;
+                    background: #E30613;
+                    color: #fff;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: #E30613;
+                        background: #fff;
+                    }
+                }
+
+                @media screen and (max-width: 575.98px) {
+                    max-width: 100%;
+                }
+            }
+        
+            // .placing-order-form__btn-cancel
+        
+            &__btn-cancel {
+                max-width: 195px;
+                width: 100%;
+                text-align: center;
+                border-radius: 8px;
+                padding: 23px;
+                margin-bottom: 10px;
+                transition: all 0.3s;
+
+                @media screen and (max-width: 575.98px) {
+                    max-width: 100%;
+                
+                }
+            }
+
+        }
+    }
+
+    // .placing-order__info
+
+    &__info {
+    }
+}
+.marker {
+}
+.title {
+}
+
+
+.text {
+}
+
+.offers {
+}
+
+.saving {
+}
+.total {
+
+    // .total__item
+
+    &__item {
+    }
+
+    // .total__label
+
+    &__label {
+    }
+
+    // .total__value
+
+    &__value {
+    }
+}

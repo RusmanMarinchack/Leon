@@ -1,0 +1,78 @@
+.delivery-payment {
+
+    // .delivery-payment__container
+
+    &__container {
+    }
+
+    // .delivery-payment__breadcrumbs
+
+    &__breadcrumbs {
+    }
+
+    // .delivery-payment__title
+
+    &__title {
+        
+        @media screen and (max-width: 991.98px) {
+            margin-top: 0;
+        }
+    }
+
+    // .delivery-payment__wrapper
+
+    &__wrapper {
+        max-width: 520px;
+        line-height: 24px;
+    }
+
+    // .delivery-payment__item
+
+    .delivery-payment-item {
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 767.98px) {
+            margin-bottom: 20px;
+        }
+
+        // .delivery-payment-item__title
+    
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    
+        // .delivery-payment-item__inner
+    
+        &__inner {
+
+            & p {
+                margin-bottom: 15px;
+            }
+        }
+    
+        // .delivery-payment-item__list
+    
+        &__list {
+            list-style: none;
+        }
+    
+        // .delivery-payment-item__item
+    
+        &__item {
+            display: flex;
+
+            & .marker {
+                margin-right: 10px;
+                font-size: 25px;
+                color: #E30613;
+            }
+        }
+    }
+}
+
+.marker {
+}
+.title {
+}
+

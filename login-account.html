@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login account</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <main class="main">
+        <div class="main__log-in log-in"> 
+            <div class="log-in__container _container">
+                <div class="log-in__header">
+                    <h4 class="log-in__title">Увійти в аккаунт</h4>
+                </div>
+    
+                <div class="log-in__wrapper">
+                    <form action="#" class="log-in__form log-in-form forms">
+                        <div class="log-in-form__item">
+                            <input class="input" type="text" name="log-in-email-phone" placeholder="E-mail або номер телефону">
+                        </div>
+                        <div class="log-in-form__item password item-password">
+                            <input class="input" name="log-in-password" type="password" placeholder="Пароль"> 
+                            <button class="btn-eye">
+                                <svg class="icon-eye">
+                                    <use xlink:href="./imges/svg/sprite.svg#eye-open"></use>
+                                </svg>
+                                <svg class="icon-eye hidden">
+                                    <use xlink:href="./imges/svg/sprite.svg#eye-hidden"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="log-in-form__item">
+                            <div class="wrapper-checkbox">
+                                <input type="checkbox" id="log-in-chackbox" name="log-in-chackbox">
+                                <label for="log-in-chackbox">Запам’ятати мене</label>
+                            </div>
+                            <a href="#" class="log-in-form__forgot-password">Забули пароль?</a>
+                        </div>
+                        <button class="log-in-form__btn red-btn" type="submit">Авторизуватись</button>
+                        <a class="log-in-form__btn link white-btn" href="#" >Немає аккаунта</a>
+                    </form>
+                </div>
+    
+                <div class="log-in__footer log-in-footer">
+                    <div class="log-in-footer__label">Або авторизуйтесь через:</div>
+                    <div class="log-in-footer__inner">
+                        <button class="log-in-footer__btn">
+                            <img src="./imges/icon-google.png" alt="Icon Google">
+                        </button>
+                        <button class="log-in-footer__btn">
+                            <img src="./imges/icon-facebook.png" alt="Icon Facebook">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

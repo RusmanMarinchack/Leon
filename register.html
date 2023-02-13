@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <main class="main">
+        <div class="main__log-in log-in"> 
+            <div class="log-in__container _container">
+                <div class="log-in__header">
+                    <h4 class="log-in__title">Реєстрація</h4>
+                </div>
+    
+                <div class="register">
+                    <form action="#" class="register__form register-form forms">
+                        <div class="register-form__item">
+                            <input type="text" class="input" placeholder="Ім’я*">
+                        </div>
+                        <div class="register-form__item">
+                            <input type="number" class="input" placeholder="Номер телефону*">
+                        </div>
+                        <div class="register-form__item">
+                            <input type="email" class="input" placeholder="E-mail*">
+                        </div>
+                        <div class="register-form__item password item-password">
+                            <input type="password" class="input" placeholder="Пароль (мінімум 7 символів)*">
+                            <button class="btn-eye">
+                                <svg class="icon-eye">
+                                    <use xlink:href="./imges/svg/sprite.svg#eye-open"></use>
+                                </svg>
+                                <svg class="icon-eye hidden">
+                                    <use xlink:href="./imges/svg/sprite.svg#eye-hidden"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="register-form__item password item-password">
+                            <input type="password" class="input" placeholder="Підтвердження паролю*">
+                            <button class="btn-eye">
+                                <svg class="icon-eye">
+                                    <use xlink:href="./imges/svg/sprite.svg#eye-open"></use>
+                                </svg>
+                                <svg class="icon-eye hidden">
+                                    <use xlink:href="./imges/svg/sprite.svg#eye-hidden"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="register-form__caption">Реєструючись, ви погоджуєтеся з <a href="#">користувальницькою угодою</a></div>
+                        <button class="register-form__btn red-btn" type="submit">Зареєструватись</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+.contact {
+
+    // .contact__container
+
+    &__container {
+    }
+
+    // .contact__title
+
+    &__title {
+    }
+
+    // .contact__wrapper
+
+    &__wrapper {
+    }
+
+    // .contact__location
+
+    .contact-location {
+        display: flex;
+        border: 1px solid #A3A6B2;
+        border-radius: 8px;
+        background: transparent;
+
+        @media screen and (max-width: 899.98px) {
+            flex-direction: column;
+        }
+
+
+        // .contact-location__info
+    
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+
+            @media screen and (max-width: 575.98px) {
+                padding: 40px 20px;
+            }
+
+        }
+    
+        // .contact-location__title
+    
+        &__title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+
+        }
+    
+        // .contact-location__contact
+    
+
+        
+    
+        // .contact-location__map
+    
+        &__map {
+            height: 400px;
+            max-width: 800px;
+            width: 100%;
+
+            @media screen and (max-width: 575.98px) {
+                height: 250px;
+            }
+
+            & .mapouter {
+                width: 100%;
+                height: 100%;
+            }
+            .gmap {
+
+                // .gmap_canvas
+            
+                &_canvas {
+                    width: 100%;
+                    height: 100%;
+            
+                    & iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // .contact__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+        line-height: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    // .contact__label
+
+    &__label {
+        margin-right: 5px;
+    }
+
+    // .contact__value
+
+    &__value {
+        & a {
+            font-weight: 700;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    // .contact__social
+
+    &__social {
+    }
+
+    & .contact-social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px 0;
+
+        @media screen and (max-width: 991.98px) {
+            flex-direction: column;
+        }
+        // .contact-social__item
+    
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48%;
+            padding: 0 5px;
+            padding: 47px;
+            border-radius: 12px;
+            color: #DEDFE7;
+
+            @media screen and (max-width: 991.98px) {
+                max-width: 500px;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.insta {
+                background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 51.04%, #FCB045 100%);
+                
+            }
+
+            &.facebook {
+                background: #3B5998;
+            }
+        }
+    
+        // .contact-social__title
+    
+        &__title {
+            font-size: 24px;
+            margin-right: 57px;
+
+            @media screen and (max-width: 991.98px)  {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            & span {
+                display: block;
+            }
+        }
+    
+        // .contact-social__link
+    
+        &__link {
+            border: 1px solid #DEDFE7;
+            background: transparent;
+            padding: 23px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #DEDFE7;
+        }
+    }
+
+    // .contact__block-form
+
+    .contact-block-form {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        margin: 40px auto;
+        border: 1px solid #DEDFE7;
+        border-radius: 8px;
+        padding: 40px;
+
+        @media screen and (max-width: 575.98px) {
+            padding: 40px 20px;
+        }
+
+        // .contact-block-form__title
+    
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 575.98px) {
+                font-size: 22px;
+            }
+        }
+    
+        // .contact-block-form__form
+    
+        .contact-form {
+    
+            // .contact-form__item
+        
+            &__item {
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                & .input, & .textarea {
+                    width: 100%;
+                    padding: 15px;
+                    border: 1px solid #DEDFE7;
+                    border-radius: 4px;
+                    outline: none;
+                    transition: all 0.3s;
+
+                    &.error {
+                        border-color: #FD1D1D;
+                        animation: shake 0.2s 2;
+
+                        &:not(:placeholder-shown) {
+                            border-color: #FD1D1D;
+                        }
+                    }
+
+                    &:not(:placeholder-shown) {
+                        border-color: #000;
+                    }
+
+                    &:focus {
+                        border-color: #000;
+                    }
+                }
+
+                & .textarea {
+                    height: 200px;
+                }
+            }
+        
+            // .contact-form__btn
+        
+            &__btn {
+                max-width: 180px;
+                width: 100%;
+                padding: 13px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+
+.mapouter {
+}
+
+
+
+
+.input {
+}

@@ -1,0 +1,53 @@
+.privacy-policy {
+
+    // .privacy-policy__container
+
+    &__container {
+    }
+
+    // .privacy-policy__breadcrumbs
+
+    &__breadcrumbs {
+    }
+
+    // .privacy-policy__title
+
+    &__title {
+    }
+
+    // .privacy-policy__wrapper
+
+    &__wrapper {
+        line-height: 24px;
+        & p {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .privacy-policy__list
+
+    &__list {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    // .privacy-policy__item
+
+    &__item {
+        margin-bottom: 20px;
+
+        & a {
+            text-decoration: none;
+            color: #000;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.marker-dots {
+}
+.title {
+}

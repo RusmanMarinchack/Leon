@@ -1,0 +1,206 @@
+.about-us {
+
+    // .about-us__container
+
+    &__container {
+    }
+
+    // .about-us__breadcrumbs
+
+    &__breadcrumbs {
+    }
+
+    // .about-us__banner
+
+    &__banner {
+        background: url('../imges/img-beckgr-about-us.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 60px 60px 80px 60px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 991.98px) {
+            padding: 25px 20px 160px 20px;
+            margin-bottom: 20px;
+            margin: 0 -15px;
+        }
+    }
+
+    // .about-us__title
+
+    &__title {
+        max-width: 564px;
+        line-height: 53px;
+        margin: 10px;
+        & span {
+            color: #E30613;
+        }
+    }
+
+    // .about-us__subtitle
+
+    &__subtitle {
+        display: flex;
+        justify-content: flex-end;
+        
+        & p {
+            max-width: 538px;
+            line-height: 160%;
+        }
+    }
+
+    // .about-us__subbunner
+
+    &__subbunner {
+        line-height: 24px;
+
+        & p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    // .about-us__services
+
+    .about-us-services {
+        display: flex;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: 991.98px) {
+            flex-direction: column;
+            margin-bottom: 60px;
+        }
+
+        // .about-us-services__block-text
+    
+        & .about-block-text {
+            width: 50%;
+            margin-right: 30px;
+            // .about-block-text__item\
+
+            @media screen and (max-width: 991.98px) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        
+            &__inner {
+                max-width: 450px;
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+        
+            // .about-block-text__title
+        
+            &__title {
+                
+                font-size: 30px;
+                line-height: 35px;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 991.98) {
+                    font-size: 22px;
+                }
+            }
+        
+            // .about-block-text__list
+        
+            &__list {
+                list-style: none;
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+
+                & .marker {
+                    margin-right: 10px;
+                    font-size: 25px;
+                    color: #E30613;
+                }
+            }
+        }
+
+        & .block-slider {
+            width: 50%;
+            
+
+            @media screen and (max-width: 991.98px) {
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // .about-us__state
+
+    & .about-us-state {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: 991.98px) {
+            margin-bottom: 60px;
+        }
+
+       
+        // .about-us-state__item
+    
+        &__item {
+            text-align: center;
+            padding-right: 10px;
+            margin: 0 auto;
+
+            @media screen and (max-width: 991.98px) {
+                margin-bottom: 40px;
+            }
+        }
+    
+        // .about-us-state__title
+    
+        &__title {
+            font-size: 60px;
+            color: #E30613;
+            font-weight: 700;
+        }
+    
+        // .about-us-state__caption
+    
+        &__caption {
+            font-size: 30px;
+        }
+    }
+}
+
+.marker {
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.block-slider-min {
+
+    // .block-slider-min__swiper-wrapper
+
+    &__swiper-wrapper {
+    }
+
+    // .block-slider-min__swiper-slide
+
+    &__swiper-slide {
+    }
+}
+
