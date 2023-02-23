@@ -2309,6 +2309,7 @@ input[type=number] {
   bottom: auto;
   top: 98%;
   background: #dedfe7;
+  z-index: 1;
 }
 
 .header .header-content .header-content-body__swiper-scrollbar span {
