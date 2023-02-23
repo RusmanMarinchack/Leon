@@ -5654,10 +5654,25 @@ input[type=number] {
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .main .office__title {
+    display: none;
+  }
+}
+
 .main .office__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 767.98px) {
+  .main .office__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .main .office .office-navigation {
@@ -5670,7 +5685,7 @@ input[type=number] {
   overflow: hidden;
 }
 
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 767.98px) {
   .main .office .office-navigation {
     display: none;
   }
@@ -5711,6 +5726,55 @@ input[type=number] {
   padding: 15px 20px;
   background: #E30613;
   color: #fff;
+}
+
+.main .office .office-navigation.office-navigation-mob {
+  display: none;
+  max-width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767.98px) {
+  .main .office .office-navigation.office-navigation-mob {
+    display: block;
+  }
+}
+
+.main .office .office-navigation.office-navigation-mob .office-navigation__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+}
+
+.main .office .office-navigation.office-navigation-mob .office-navigation__title .office-navigation__active {
+  padding: 0;
+  color: #000;
+  background: transparent;
+}
+
+.main .office .office-navigation.office-navigation-mob .office-navigation__list {
+  height: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.main .office .office-navigation.office-navigation-mob .icon-catalog-arrow {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  stroke: #000;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  stroke-linecap: round;
+  fill: transparent;
 }
 
 .main .office .office-orders {
@@ -6167,9 +6231,21 @@ input[type=number] {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .main .office .change-password .change-password-form {
+    text-align: center;
+  }
+}
+
 .main .office .change-password .change-password-form__item {
   max-width: 385px;
   position: relative;
+}
+
+@media screen and (max-width: 767.98px) {
+  .main .office .change-password .change-password-form__item {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -6207,6 +6283,16 @@ input[type=number] {
 
 .main .office .change-password .change-password-form__item input:not(:placeholder-shown) ~ .icon-eye {
   stroke: #000;
+}
+
+.main .office .change-password .change-password-form__item input.error {
+  border-color: #FD1D1D;
+  -webkit-animation: shake 0.2s 2;
+          animation: shake 0.2s 2;
+}
+
+.main .office .change-password .change-password-form__item input.error:not(:placeholder-shown) {
+  border-color: #FD1D1D;
 }
 
 .main .office .change-password .change-password-form__item .icon-castle {
@@ -6426,11 +6512,13 @@ input[type=number] {
 .main .log-in__title {
   padding: 19px;
   margin: 0;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 991.98px) {
   .main .log-in__title {
     padding: 15px;
+    font-size: 18px;
   }
 }
 
@@ -6564,6 +6652,12 @@ input[type=number] {
   padding: 40px 0;
 }
 
+@media screen and (max-width: 767.98px) {
+  .main .log-in .log-in-footer {
+    padding-top: 0;
+  }
+}
+
 .main .log-in .log-in-footer__label {
   font-weight: 400;
   margin-bottom: 15px;
@@ -6574,6 +6668,17 @@ input[type=number] {
   height: 60px;
   border: 1px solid #DEDFE7;
   background: transparent;
+}
+
+@media screen and (max-width: 767.98px) {
+  .main .log-in .log-in-footer__btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.main .log-in .log-in-footer__btn img {
+  width: 100%;
 }
 
 .main .log-in .register-form {
@@ -6597,6 +6702,7 @@ input[type=number] {
 
 .main .log-in .register-form__caption {
   font-size: 14px;
+  text-align: center;
 }
 
 .main .log-in .register-form__caption a {
@@ -6604,7 +6710,10 @@ input[type=number] {
 }
 
 .main .log-in .register-form__btn {
+  display: block;
   width: 100%;
+  text-decoration: none;
+  text-align: center;
   margin-top: 22px;
   border-radius: 8px;
   padding: 23px;

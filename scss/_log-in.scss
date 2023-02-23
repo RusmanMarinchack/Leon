@@ -71,9 +71,11 @@
     &__title {
         padding: 19px;
         margin: 0;
+        font-size: 24px;
 
         @media screen and (max-width: 991.98px) {
             padding: 15px;
+            font-size: 18px;
         }
     }
 
@@ -190,6 +192,8 @@
                     margin-right: 0;
                 }
             }
+
+
         }
     }
 
@@ -201,6 +205,10 @@
         align-items: center;
         justify-content: center;
         padding: 40px 0;
+
+        @media screen and (max-width: 767.98px) {
+            padding-top: 0;
+        }
 
         // .log-in-footer__label
     
@@ -221,6 +229,15 @@
             height: 60px;
             border: 1px solid #DEDFE7;
             background: transparent;
+
+            @media screen and (max-width: 767.98px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            & img {
+                width: 100%;
+            }
         }
     }
 
@@ -249,6 +266,7 @@
 
 		&__caption {
             font-size: 14px;
+            text-align: center;
 
             & a {
                 color: #E30613;
@@ -258,7 +276,10 @@
 		// .register-form__btn
 
 		&__btn {
+            display: block;
             width: 100%;
+            text-decoration: none;
+            text-align: center;
             margin-top: 22px;
             border-radius: 8px;
             padding: 23px;

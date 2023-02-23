@@ -727,12 +727,12 @@ popupActive();
 
 // Робимо аккордеон в кабінеті в пункті мої замовлкння.
 function officeAccordeon() {
-    let wrapperAccordeons = document.querySelectorAll('.office-orders__accordeon');
+    let wrapperAccordeons = document.querySelectorAll('.accordeon');
 
     if(wrapperAccordeons.length) {
         wrapperAccordeons.forEach(item => {
-            let btn = item.querySelector('.office-header .office-header__btn');
-            let body = item.querySelector('.office-orders__products');
+            let btn = item.querySelector('.accordeon-btn');
+            let body = item.querySelector('.accordeon-body');
 
             if(btn) {
                 btn.addEventListener('click', function() {
@@ -892,3 +892,7 @@ function showPasword() {
 };
 
 showPasword();
+
+
+// Робоми аккордеон навігація по офісу.
+// function accordeon

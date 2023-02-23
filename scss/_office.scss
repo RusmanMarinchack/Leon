@@ -8,12 +8,19 @@
     // .office__title
 
     &__title {
+        @media screen and (max-width: 767.98px) {
+            display: none;
+        }
     }
 
     // .office__wrapper
 
     &__wrapper {
         display: flex;
+
+        @media screen and (max-width: 767.98px) {
+            flex-direction: column;
+        }
     }
 
     // .office__navigation
@@ -27,7 +34,7 @@
         border-radius: 8px;
         overflow: hidden;
 
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 767.98px) {
             display: none;
         }
         // .office-navigation__list
@@ -72,6 +79,46 @@
             padding: 15px 20px;
             background: #E30613;
             color: #fff;
+        }
+
+        &.office-navigation-mob {
+            display: none;
+            max-width: 100%;
+            margin-bottom: 30px;
+            overflow: hidden;
+
+            @media screen and (max-width: 767.98px) {
+                display: block;
+            }
+
+            & .office-navigation__title {   
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                
+                & .office-navigation__active  {
+                    padding: 0;
+                    color: #000;
+                    background: transparent;
+                }
+            }
+
+            & .office-navigation__list {
+                height: 0;
+                transition: all 0.4s;
+            }
+
+            & .icon-catalog-arrow {
+                width: 10px;
+                height: 10px;
+                margin-left: 10px;
+                stroke: #000;
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+                stroke-linecap: round;
+                fill: transparent;
+            }
         }
     }
 
@@ -578,12 +625,20 @@
             // .change-password__form
     
             & .change-password-form {
+
+                @media screen and (max-width: 767.98px) {
+                    text-align: center;
+                }
     
                 // .change-password-form__item
         
                 &__item {
                     max-width: 385px;
                     position: relative;
+
+                    @media screen and (max-width: 767.98px) {
+                        margin: 0 auto;
+                    }
 
                     @media screen and (max-width: 575.98px) {
                         max-width: 100%;
@@ -616,6 +671,15 @@
 
                             & ~ .icon-eye {
                                 stroke: #000;
+                            }
+                        }
+
+                        &.error {
+                            border-color: #FD1D1D;
+                            animation: shake 0.2s 2;
+    
+                            &:not(:placeholder-shown) {
+                                border-color: #FD1D1D;
                             }
                         }
                     }
