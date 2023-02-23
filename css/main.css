@@ -277,10 +277,23 @@ body {
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  body.about-us .brends__title {
+    font-size: 22px;
+    text-align: start;
+  }
+}
+
 ._container {
   max-width: 1248px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+  ._container {
+    max-width: 1170px;
+  }
 }
 
 .title {
@@ -292,6 +305,7 @@ body {
 @media screen and (max-width: 991.98px) {
   .title {
     font-size: 30px;
+    line-height: 35px;
   }
 }
 
@@ -587,7 +601,7 @@ body {
 
 .breadcrumbs__item .marker {
   display: inline-block;
-  height: 25px;
+  height: 26px;
   font-size: 20px;
   margin-right: 10px;
   color: #a3a6b2;
@@ -1850,6 +1864,8 @@ input[type=number] {
     width: 100%;
     height: 100%;
     padding: 30px 20px;
+    -webkit-box-shadow: 10px 0 5px -2px #000;
+            box-shadow: 10px 0 5px -2px #000;
   }
 }
 
@@ -1931,6 +1947,8 @@ input[type=number] {
     z-index: 1;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    -webkit-box-shadow: 10px 0 5px -2px #000;
+            box-shadow: 10px 0 5px -2px #000;
   }
   .header .header-content .block-catalog .catalog-sub-menu__sub-wrap.active {
     left: 0;
@@ -2000,6 +2018,8 @@ input[type=number] {
     width: 100%;
     background: #fff;
     overflow: auto;
+    -webkit-box-shadow: 10px 0 5px -2px #000;
+            box-shadow: 10px 0 5px -2px #000;
   }
 }
 
@@ -3056,10 +3076,13 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
-  margin: -1px;
+  margin: -2px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -3096,6 +3119,7 @@ input[type=number] {
 @media screen and (max-width: 767.98px) {
   .main .brends__item {
     border: none;
+    height: 100%;
   }
 }
 
@@ -3108,8 +3132,6 @@ input[type=number] {
 @media screen and (max-width: 767.98px) {
   .main .brends__item img {
     width: 100%;
-    -o-object-fit: none;
-       object-fit: none;
   }
 }
 
@@ -5051,6 +5073,12 @@ input[type=number] {
   max-width: 564px;
   line-height: 53px;
   margin: 10px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .main .about-us__title {
+    line-height: 35px;
+  }
 }
 
 .main .about-us__title span {

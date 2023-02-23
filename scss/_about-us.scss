@@ -33,6 +33,11 @@
         max-width: 564px;
         line-height: 53px;
         margin: 10px;
+
+        @media screen and (max-width: 991.98px) {
+            line-height: 35px;
+        }
+
         & span {
             color: #E30613;
         }

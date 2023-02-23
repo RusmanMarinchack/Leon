@@ -26,13 +26,24 @@ body {
         font-size: 15px;
     }
 
-
+    &.about-us {
+        & .brends__title {
+            @media screen and (max-width: 767.98px) {
+                font-size: 22px;
+                text-align: start;
+            }
+        }
+    }
 }
 
 ._container {
     max-width: 1248px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1300px) {
+        max-width: 1170px;
+    }
     
 }
 
@@ -43,6 +54,7 @@ body {
 
     @media screen and (max-width: 991.98px) {
         font-size: 30px;
+        line-height: 35px;
     }
 }
 
@@ -353,7 +365,7 @@ body {
 
         & .marker {
             display: inline-block;
-            height: 25px;
+            height: 26px;
             font-size: 20px;
             margin-right: 10px;
             color: rgba(163, 166, 178, 1);

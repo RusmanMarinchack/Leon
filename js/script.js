@@ -341,8 +341,13 @@ function burgerMenu() {
                 let id = this.dataset.mobBtn;
                 let menu = document.querySelector(`#${id}`);
 
+                if(id === 'search-mob') {
+                    document.querySelector('.form-search .form-search__item input').focus();
+                }
+
                 if(id && menu) {
                     if(this.classList.contains('active')) {
+                        document.querySelector('html').classList.remove('look');
                         this.classList.remove('active');
                         menu.classList.remove('active');
 
@@ -351,6 +356,7 @@ function burgerMenu() {
                             document.querySelector('#search-mob').classList.remove('active');
                         }
                     } else {
+                        document.querySelector('html').classList.add('look');
                         this.classList.add('active');
                         menu.classList.add('active');
                     };
