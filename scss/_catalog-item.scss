@@ -138,9 +138,53 @@
             max-width: 220px;
             width: 100%;
             margin-right: 50px;
+            z-index: 21;
+            transition: all 0.3s;
+
+            &.active {
+                left: 0;
+            }
 
             @media screen and (max-width: 991.98px) {
+                max-width: 100%;
+                position: fixed;
+                top: 0;
+                left: -999px;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background: #fff;
+                overflow: auto;
+                
+            }
+
+            &__btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
                 display: none;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                border: 1px solid #1d1d1b;
+                font-weight: 400;
+                background: #fff;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+
+                & svg {
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    stroke: #1D1D1B;
+                    stroke-linecap: round;
+                }
+
+                @media screen and (max-width: 991.98px) {
+                    display: flex;
+                }
             }
     
             // .catalog-filter__item
@@ -259,6 +303,55 @@
                             color: #A3A6B2;
                         }
                     }
+
+                    &__link-checkbox {
+                        margin-right: 10px;
+                        text-decoration: none;
+                        color: #000;
+                        position: relative;
+                    
+                        &.active {
+                            &::before {
+                                border-color: transparent;
+                                background: rgba(227, 6, 19, 1);
+                                border-radius: 4px;
+                            }
+                    
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            min-width: 16px;
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 10px;
+                            border: 1px solid rgba(222, 223, 231, 1);
+                            border-radius: 2px;
+                            background: transparent;
+                            transition: all 0.2s;
+                        }
+                    
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 3.8px;
+                            height: 6.4px;
+                            position: absolute;
+                            left: 6.5px;
+                            top: 4.5px;
+                            background: transparent;
+                            border-top: 1px solid #fff;
+                            border-left: 1px solid #fff;
+                            transform: rotate(225deg);
+                            opacity: 0;
+                            transition: all 0.2s;
+                        }
+                    }
+                    
                 
                     // .fillter-list__checkbox
                 
@@ -376,7 +469,7 @@
 
                                 & ~ .sort__inner {
                                     opacity: 1;
-                                    overflow: visible;
+                                    visibility: visible;
                                     transform: translateY(0);
                                 }
                             }
@@ -415,7 +508,7 @@
                             background: #fff;
                             z-index: 15;
                             opacity: 0;
-                            overflow: hidden;
+                            visibility: hidden;
                             transform: translateY(10px);
                         }
                     }

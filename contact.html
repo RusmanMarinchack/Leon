@@ -9,7 +9,6 @@
 </head>
 <body class="contact">
     
-
     <header class="header">
         <div class="header__wrap">
             <div class="header__top header-top">
@@ -41,7 +40,7 @@
               </div>
               <div class="header__wrapper header-wrapper">
                 <div class="header-wrapper__container _container">
-                    <div class="header-wrapper__burger burger">
+                    <div class="header-wrapper__burger burger mob-btn" data-mob-btn="burger-menu">
                         <span></span>
                       </div>
                       <div class="header-wrapper__logo">
@@ -50,7 +49,8 @@
                         </a>
                       </div>
         
-                      <div class="header-wrapper__search">
+                      <div id="search-mob" class="header-wrapper__search header-wrapper-search">
+                        <h4 class="header-wrapper-search__title">Пошук</h4>
                         <form action="#" class="header-wrapper__form-search form-search">
                             <div class="form-search__item item-focus">
                                 <input class="input input-focus" name="search" type="text" placeholder="Пошук по сайту">
@@ -66,7 +66,7 @@
                       <div class="header-wrapper___actions actions">
                         <ul class="actions__list">
                             <li class="actions__item basked">
-                                <a href="#" class="actions__link">
+                                <a href="./basket.html" class="actions__link">
                                     <svg class="icon-basked">
                                         <use xlink:href="./imges/svg/sprite.svg#basked"></use>
                                     </svg>
@@ -179,7 +179,7 @@
                                 </div>
                             </li>
                             <li class="actions__item user">
-                                <a href="#" class="actions__link">
+                                <a href="./office-ordres.html" class="actions__link">
                                     <svg class="icon-user">
                                         <use xlink:href="./imges/svg/sprite.svg#user"></use>
                                     </svg>
@@ -190,7 +190,7 @@
                                 </a>
                             </li>
                             <li class="actions__item selected">
-                                <a href="#" class="actions__link">
+                                <a href="./favorite.html" class="actions__link">
                                     <svg class="icon-selected">
                                         <use xlink:href="./imges/svg/sprite.svg#selected"></use>
                                     </svg>
@@ -824,24 +824,79 @@
             </div>
 
             <div class="header-content__body header-content-body">
-                <nav class="header-content-body__nav nav">
+                <nav id="burger-menu" class="header-content-body__nav nav">
+                    <div class="header-wrapper___actions actions">
+                        <ul class="actions__list">
+                            <li class="actions__item user">
+                                <a href="./office-ordres.html" class="actions__link">
+                                    <svg class="icon-user">
+                                        <use xlink:href="./imges/svg/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="actions__item selected">
+                                <a href="./favorite.html" class="actions__link">
+                                    <svg class="icon-selected">
+                                        <use xlink:href="./imges/svg/sprite.svg#selected"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="actions__item selected search-btn">
+                                <button class="mob-btn" data-mob-btn="search-mob">
+                                    <svg class="icon-selected">
+                                        <use xlink:href="./imges/svg/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                      </div>
+
                     <ul class="nav__menu">
+                        <span class="nav__title title">Меню</span>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Про компанію</a>
+                            <a href="./about-us.html" class="nav__link">Про компанію</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Новини</a>
+                            <a href="./all-news.html" class="nav__link">Новини</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Доставка та оплата</a>
+                            <a href="./delivery-payment.html" class="nav__link">Доставка та оплата</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Гарантії</a>
+                            <a href="./garantee.html" class="nav__link">Гарантії</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Контакти</a>
+                            <a href="./contact.html" class="nav__link">Контакти</a>
                         </li>
                     </ul>
+
+                    <div class="header__top header-top">
+                        <div class="header-top__container _container">
+                            <div class="header-top__location-text">
+                                <p>
+                                  вул.Калинівська 13-В, ТЦ Добробут, нижня стоянка, контейнер А48,А49
+                                </p>
+                                <div class="header-top__inner">
+                                  <div class="header-top__phone">
+                                    <a href="tel:+380660533391">
+                                      <svg class="icon-message">
+                                        <use xlink:href="./imges/svg/sprite.svg#message"></use>
+                                      </svg>
+                                      +38 (066) 053-33-91
+                                    </a>
+                                  </div>
+                                  <div class="header-top__languages">
+                                    <ul>
+                                      <li><a class="active" href="#">Укр</a></li>
+                                      <li><a href="#">Eng</a></li>
+                                      <li><a href="#">Rom</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        
+                      </div>
                 </nav>
             </div>
         </div>

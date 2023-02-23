@@ -42,7 +42,7 @@
               </div>
               <div class="header__wrapper header-wrapper">
                 <div class="header-wrapper__container _container">
-                    <div class="header-wrapper__burger burger">
+                    <div class="header-wrapper__burger burger mob-btn" data-mob-btn="burger-menu">
                         <span></span>
                       </div>
                       <div class="header-wrapper__logo">
@@ -51,7 +51,8 @@
                         </a>
                       </div>
         
-                      <div class="header-wrapper__search">
+                      <div id="search-mob" class="header-wrapper__search header-wrapper-search">
+                        <h4 class="header-wrapper-search__title">Пошук</h4>
                         <form action="#" class="header-wrapper__form-search form-search">
                             <div class="form-search__item item-focus">
                                 <input class="input input-focus" name="search" type="text" placeholder="Пошук по сайту">
@@ -67,7 +68,7 @@
                       <div class="header-wrapper___actions actions">
                         <ul class="actions__list">
                             <li class="actions__item basked">
-                                <a href="#" class="actions__link">
+                                <a href="./basket.html" class="actions__link">
                                     <svg class="icon-basked">
                                         <use xlink:href="./imges/svg/sprite.svg#basked"></use>
                                     </svg>
@@ -180,7 +181,7 @@
                                 </div>
                             </li>
                             <li class="actions__item user">
-                                <a href="#" class="actions__link">
+                                <a href="./office-ordres.html" class="actions__link">
                                     <svg class="icon-user">
                                         <use xlink:href="./imges/svg/sprite.svg#user"></use>
                                     </svg>
@@ -191,7 +192,7 @@
                                 </a>
                             </li>
                             <li class="actions__item selected">
-                                <a href="#" class="actions__link">
+                                <a href="./favorite.html" class="actions__link">
                                     <svg class="icon-selected">
                                         <use xlink:href="./imges/svg/sprite.svg#selected"></use>
                                     </svg>
@@ -825,24 +826,79 @@
             </div>
 
             <div class="header-content__body header-content-body">
-                <nav class="header-content-body__nav nav">
+                <nav id="burger-menu" class="header-content-body__nav nav">
+                    <div class="header-wrapper___actions actions">
+                        <ul class="actions__list">
+                            <li class="actions__item user">
+                                <a href="./office-ordres.html" class="actions__link">
+                                    <svg class="icon-user">
+                                        <use xlink:href="./imges/svg/sprite.svg#user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="actions__item selected">
+                                <a href="./favorite.html" class="actions__link">
+                                    <svg class="icon-selected">
+                                        <use xlink:href="./imges/svg/sprite.svg#selected"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="actions__item selected search-btn">
+                                <button class="mob-btn" data-mob-btn="search-mob">
+                                    <svg class="icon-selected">
+                                        <use xlink:href="./imges/svg/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                      </div>
+
                     <ul class="nav__menu">
+                        <span class="nav__title title">Меню</span>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Про компанію</a>
+                            <a href="./about-us.html" class="nav__link">Про компанію</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Новини</a>
+                            <a href="./all-news.html" class="nav__link">Новини</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Доставка та оплата</a>
+                            <a href="./delivery-payment.html" class="nav__link">Доставка та оплата</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Гарантії</a>
+                            <a href="./garantee.html" class="nav__link">Гарантії</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Контакти</a>
+                            <a href="./contact.html" class="nav__link">Контакти</a>
                         </li>
                     </ul>
+
+                    <div class="header__top header-top">
+                        <div class="header-top__container _container">
+                            <div class="header-top__location-text">
+                                <p>
+                                  вул.Калинівська 13-В, ТЦ Добробут, нижня стоянка, контейнер А48,А49
+                                </p>
+                                <div class="header-top__inner">
+                                  <div class="header-top__phone">
+                                    <a href="tel:+380660533391">
+                                      <svg class="icon-message">
+                                        <use xlink:href="./imges/svg/sprite.svg#message"></use>
+                                      </svg>
+                                      +38 (066) 053-33-91
+                                    </a>
+                                  </div>
+                                  <div class="header-top__languages">
+                                    <ul>
+                                      <li><a class="active" href="#">Укр</a></li>
+                                      <li><a href="#">Eng</a></li>
+                                      <li><a href="#">Rom</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        
+                      </div>
                 </nav>
             </div>
         </div>
@@ -945,44 +1001,42 @@
                     </div>
 
                     <div class="catalog-item-wrapper__inner">
-                        <div class="catalog-item-wrapper__filter catalog-filter">
+                        <div id="filters" class="catalog-item-wrapper__filter catalog-filter">
+                            <button class="catalog-filter__btn">
+                                <svg>
+                                    <use xlink:href="./imges/svg/sprite.svg#cross"></use>
+                                </svg>
+                            </button>
                             <div class="catalog-filter__item brend">
                                 <div class="catalog-filter__name">Бренд</div>
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-1" id="brend-1">
-                                            <label for="brend-1" class="fillter-list__name">Art Wood Parquet </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Art Wood Parquet </a>
                                             <span class="lenght">12</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-2" id="brend-2">
-                                            <label for="brend-2" class="fillter-list__name">BEFAG </label>
+                                            <a href="#" class="fillter-list__link-checkbox">BEFAG </a>
                                             <span class="lenght">145</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-3" id="brend-3">
-                                            <label for="brend-3" class="fillter-list__name">Baltic Wood </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Baltic Wood </a>
                                             <span class="lenght">23</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-4" id="brend-4">
-                                            <label for="brend-4" class="fillter-list__name">Barlinek </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Barlinek </a>
                                             <span class="lenght">431</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-5" id="brend-5">
-                                            <label for="brend-5" class="fillter-list__name">Bonnard </label>
+                                            <a href="#" class="fillter-list__link-checkbox active">Bonnard </a>
                                             <span class="lenght">66</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-6" id="brend-6">
-                                            <label for="brend-6" class="fillter-list__name">EXOline </label>
+                                            <a href="#" class="fillter-list__link-checkbox">EXOline </a>
                                             <span class="lenght">81</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="brend-7" id="brend-7">
-                                            <label for="brend-7" class="fillter-list__name">Esco </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Esco </a>
                                             <span class="lenght">18</span>
                                         </li>
                                     </ul>
@@ -994,13 +1048,11 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="type-1" id="type-1">
-                                            <label for="type-1" class="fillter-list__name">Клейовий </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Клейовий </a>
                                             <span class="lenght">1013</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="type-2" id="type-2">
-                                            <label for="type-2" class="fillter-list__name">Замковий </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Замковий </a>
                                             <span class="lenght">1656</span>
                                         </li>
                                     </ul>
@@ -1012,33 +1064,27 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="number-1" id="number-1">
-                                            <label for="number-1" class="fillter-list__name">Угорська ялинка </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Угорська ялинка </a>
                                             <span class="lenght">32</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="number-2" id="number-2">
-                                            <label for="number-2" class="fillter-list__name">Французьска ялинка </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Французьска ялинка </a>
                                             <span class="lenght">85</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="number-3" id="number-3">
-                                            <label for="number-3" class="fillter-list__name">Модулний </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Модулний </a>
                                             <span class="lenght">165</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="number-4" id="number-4">
-                                            <label for="number-4" class="fillter-list__name">Односмуговий </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Односмуговий </a>
                                             <span class="lenght">1656</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="number-5" id="number-5">
-                                            <label for="number-5" class="fillter-list__name">Двосмуговий </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Двосмуговий </a>
                                             <span class="lenght">21</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="number-6" id="number-6">
-                                            <label for="number-6" class="fillter-list__name">Трьохсмуговий </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Трьохсмуговий </a>
                                             <span class="lenght">91</span>
                                         </li>
                                     </ul>
@@ -1049,13 +1095,11 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="chamfer-1" id="chamfer-1">
-                                            <label for="chamfer-1" class="fillter-list__name">Є </label>
+                                            <a href="#" class="fillter-list__link-checkbox active">Є </a>
                                             <span class="lenght">1013</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="chamfer-2" id="chamfer-2">
-                                            <label for="chamfer-2" class="fillter-list__name">Немає </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Немає </a>
                                             <span class="lenght">1656</span>
                                         </li>
                                     </ul>
@@ -1067,38 +1111,31 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-1" id="tree-1">
-                                            <label for="tree-1" class="fillter-list__name">Американський горіх </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Американський горіх </a>
                                             <span class="lenght">12</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-2" id="tree-2">
-                                            <label for="tree-2" class="fillter-list__name">Бук </label>
+                                             <a href="#" class="fillter-list__link-checkbox">Бук </a>
                                             <span class="lenght">145</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-3" id="tree-3">
-                                            <label for="tree-3" class="fillter-list__name">Дуб </label>
+                                             <a href="#" class="fillter-list__link-checkbox">Дуб </a>
                                             <span class="lenght">23</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-4" id="tree-4">
-                                            <label for="tree-4" class="fillter-list__name">Європейска вишня </label>
+                                             <a href="#" class="fillter-list__link-checkbox">Європейска вишня </a>
                                             <span class="lenght">431</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-5" id="tree-5">
-                                            <label for="tree-5" class="fillter-list__name">Горіх </label>
+                                             <a href="#" class="fillter-list__link-checkbox">Горіх </a>
                                             <span class="lenght">66</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-6" id="tree-6">
-                                            <label for="tree-6" class="fillter-list__name">Береза </label>
+                                             <a href="#" class="fillter-list__link-checkbox">Береза </a>
                                             <span class="lenght">81</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="tree-7" id="tree-7">
-                                            <label for="tree-7" class="fillter-list__name">Esco </label>
+                                             <a href="#" class="fillter-list__link-checkbox">Esco </a>
                                             <span class="lenght">18</span>
                                         </li>
                                     </ul>
@@ -1110,38 +1147,31 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-1" id="producer-1">
-                                            <label for="producer-1" class="fillter-list__name">Австрія </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Австрія </a>
                                             <span class="lenght">12</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-2" id="producer-2">
-                                            <label for="producer-2" class="fillter-list__name">Україна </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Україна </a>
                                             <span class="lenght">145</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-3" id="producer-3">
-                                            <label for="producer-3" class="fillter-list__name">США </label>
+                                            <a href="#" class="fillter-list__link-checkbox">США </a>
                                             <span class="lenght">23</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-4" id="producer-4">
-                                            <label for="producer-4" class="fillter-list__name">В’єтнам </label>
+                                            <a href="#" class="fillter-list__link-checkbox">В’єтнам </a>
                                             <span class="lenght">431</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-5" id="producer-5">
-                                            <label for="producer-5" class="fillter-list__name">Китай </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Китай </a>
                                             <span class="lenght">66</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-6" id="producer-6">
-                                            <label for="producer-6" class="fillter-list__name">Марокко </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Марокко </a>
                                             <span class="lenght">81</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="producer-7" id="producer-7">
-                                            <label for="producer-7" class="fillter-list__name">Португалія </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Американський горіх </a>
                                             <span class="lenght">18</span>
                                         </li>
                                     </ul>
@@ -1153,18 +1183,15 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="structure-1" id="structure-1">
-                                            <label for="structure-1" class="fillter-list__name">Натуральний </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Натуральний </a>
                                             <span class="lenght">12</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="structure-2" id="structure-2">
-                                            <label for="structure-2" class="fillter-list__name">Світлий </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Світлий </a>
                                             <span class="lenght">145</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="structure-3" id="structure-3">
-                                            <label for="structure-3" class="fillter-list__name">Темний </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Темний </a>
                                             <span class="lenght">23</span>
                                         </li>
                                     </ul>
@@ -1176,18 +1203,15 @@
                                 <div class="catalog-filter__inner">
                                     <ul class="fillter-list">
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="coating-1" id="coating-1">
-                                            <label for="coating-1" class="fillter-list__name">Лак </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Лак </a>
                                             <span class="lenght">12</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="coating-2" id="coating-2">
-                                            <label for="coating-2" class="fillter-list__name">Олія </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Олія </a>
                                             <span class="lenght">145</span>
                                         </li>
                                         <li class="fillter-list__item">
-                                            <input class="fillter-list__checkbox" type="checkbox" name="coating-3" id="coating-3">
-                                            <label for="coating-3" class="fillter-list__name">Без покриття </label>
+                                            <a href="#" class="fillter-list__link-checkbox">Без покриття </a>
                                             <span class="lenght">23</span>
                                         </li>
                                     </ul>
@@ -1220,7 +1244,7 @@
                         <div class="catalog-item-wrapper__result catalog-result">
                             <div class="catalog-result__header catalog-result-header">
                                 <div class="catalog-result-header__item filter">
-                                    <button class="filter__btn result-btn">
+                                    <button class="filter__btn result-btn mob-btn" data-mob-btn="filters">
                                         <svg class="icon-catalog-arrow">
                                             <use xlink:href="./imges/svg/sprite.svg#filter-btn"></use>
                                         </svg>

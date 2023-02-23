@@ -329,14 +329,41 @@ function rangeBtn() {
 };
 rangeBtn();
 
-// Робимо бургкр меню.
+// Вішаїм кдік на кнопки () і меню моб версії.
 function burgerMenu() {
-    let burgerBtn = document.querySelector('.header-wrapper__burger');
+    let mobBtns = document.querySelectorAll('.mob-btn');
+    let filterBtnClose = document.querySelector('.catalog-filter__btn');
 
-    if (burgerBtn) {
-        burgerBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
+    if(mobBtns.length) {
+        mobBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+
+                let id = this.dataset.mobBtn;
+                let menu = document.querySelector(`#${id}`);
+
+                if(id && menu) {
+                    if(this.classList.contains('active')) {
+                        this.classList.remove('active');
+                        menu.classList.remove('active');
+
+                        if (id === 'burger-menu') {
+                            document.querySelector('.search-btn button').classList.remove('active');
+                            document.querySelector('#search-mob').classList.remove('active');
+                        }
+                    } else {
+                        this.classList.add('active');
+                        menu.classList.add('active');
+                    };
+                };
+            });
         });
+
+        if(filterBtnClose) {
+            filterBtnClose.addEventListener('click', function() {
+                document.querySelector('.filter__btn').classList.remove('active');
+                document.querySelector('.catalog-filter').classList.remove('active');
+            });
+        };
     };
 };
 
@@ -368,34 +395,33 @@ itemFocusAddClass();
 
 
 // Виводимо текст в міні корзині якщо вона пуста.
-function emptyMiniBasket() {
-    let miniBasked = document.querySelector('.mini-basked');
+// function emptyMiniBasket() {
+//     let miniBasked = document.querySelector('.mini-basked');
 
-    if(miniBasked) {
-        let miniBaskedWrapper = miniBasked.querySelector('.mini-basked__wrapper');
-        let btnMiniBasket = document.querySelector('.actions__item.basked .actions__link');
+//     if(miniBasked) {
+//         let miniBaskedWrapper = miniBasked.querySelector('.mini-basked__wrapper');
+//         let btnMiniBasket = document.querySelector('.actions__item.basked .actions__link');
     
-        let text = 'Ваш кошик порожній';
+//         let text = 'Ваш кошик порожній';
     
-        if(miniBaskedWrapper) {
+//         if(miniBaskedWrapper) {
     
-            if(miniBaskedWrapper.innerHTML.trim() === '') {
-                miniBasked.innerHTML = `<p class="mini-basked__text">${text}</p>`;
-            }
+//             if(miniBaskedWrapper.innerHTML.trim() === '') {
+//                 miniBasked.innerHTML = `<p class="mini-basked__text">${text}</p>`;
+//             }
     
-            if(btnMiniBasket) {
-                btnMiniBasket.addEventListener('click', function(e) {
-                    e.preventDefault()
-                });
-            };
-        };
-    }
+//             if(btnMiniBasket) {
+//                 btnMiniBasket.addEventListener('click', function(e) {
+//                     e.preventDefault()
+//                 });
+//             };
+//         };
+//     }
 
 
 
-};
+// };
 
-emptyMiniBasket();
 
 
 // Робимо широну для sub menu  (.catalog-sub-menu)
@@ -421,6 +447,45 @@ function widthSubMenuCatalog() {
 widthSubMenuCatalog();
 
 
+
+// Перевірка на сенсорні екрани, і додаємо класс для body.
+const isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBorry: function() {
+        return navigator.userAgent.match(/BlackBorry/i);
+    },
+    IOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (
+            isMobile.Android() ||
+            isMobile.BlackBorry() ||
+            isMobile.IOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows()
+        );
+    }
+};
+
+if (isMobile.any()){
+    document.body.classList.add('_touch');
+} else {
+    document.body.classList.add('_pc');
+}
+
+let events = document.body.classList.contains('_touch') ? 'click' : 'mousemove';
+// ====
+
+
 // Робимо клік на пункти категорії, і відкриваємо підкатегорію.
 function catalogSubCategory() {
     let categoryItem = document.querySelectorAll('.block-catalog__item');
@@ -430,25 +495,27 @@ function catalogSubCategory() {
     let catalogShadow = document.querySelector('.header-content__shadow');
     let btnBackOne = document.querySelectorAll('.catalog-sub-menu__btn');
     let btnBackTwo = document.querySelectorAll('.sub-wrap__btn');
+
+
+    
  
     if(categoryItem) {
         categoryItem.forEach(item => {
-            item.addEventListener('click', function() {
+                item.addEventListener(events, function() {
+                    let dataSubCatalog = this.dataset.subCatalog;
 
-                let dataSubCatalog = this.dataset.subCatalog;
-
-                if(dataSubCatalog) {
-                    let subMneuCatalog = document.querySelector(`.catalog-sub-menu_${dataSubCatalog}`);
-
-                    if(subMneuCatalog) {
-                        removeClasActiveLevelOne()
-                        catalogShadow.classList.add('active');
-                        this.classList.add('active')
-                        subMneuCatalog.classList.add('active');
-                        
+                    if(dataSubCatalog) {
+                        let subMneuCatalog = document.querySelector(`.catalog-sub-menu_${dataSubCatalog}`);
+    
+                        if(subMneuCatalog) {
+                            removeClasActiveLevelOne()
+                            catalogShadow.classList.add('active');
+                            this.classList.add('active')
+                            subMneuCatalog.classList.add('active');
+                            
+                        };
                     };
-                };
-            });
+                });
         });
 
 
@@ -476,7 +543,8 @@ function catalogSubCategory() {
 
 
         if(catalogShadow) {
-            catalogShadow.addEventListener('click', function() {
+            
+            catalogShadow.addEventListener(events, function() {
                 this.classList.remove('active');
                 catalogWrapper.classList.remove('active');
                 removeClasActiveLevelOne()
@@ -516,7 +584,7 @@ function catalogSubCategory() {
 catalogSubCategory();
 
 
-// Робимо клік на кнопку каталог на мобільній версії.
+// Робимо клік на кнопку каталог на мобільній версії або якщо є класс .button
 
 function clickCatalogBtn() {
     let catalogBtn = document.querySelector('.block-catalog__header');
