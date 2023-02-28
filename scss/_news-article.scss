@@ -86,6 +86,12 @@
                 margin-bottom: -10px;
                 border-color: rgba(227, 6, 19, 1);
                 transform: translateY(-10px);
+
+                & .news-article-item__btn {
+                    background: #fff;
+                    border-color: #E30613;
+                    color: #E30613;
+                }
             }
         }
 

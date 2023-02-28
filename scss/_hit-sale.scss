@@ -1,7 +1,7 @@
 .hit-sale {
 
     &__container {
-
+        position: relative;
     }
 
     &__block-title{
@@ -49,6 +49,12 @@
     }
 
     & .hit-sale-wrapper__swiper-button-prev{
+        left: -43px;
+
+        @media screen and (max-width: 1249.98px) {
+            left: 20px;
+        }
+
         &.swiper-button-disabled {
                 pointer-events: auto;
         }
@@ -66,6 +72,12 @@
     // .block-slider__swiper-button-next
 
     & .hit-sale-wrapper__swiper-button-next{
+        right: -43px;
+
+        @media screen and (max-width: 1249.98px) {
+            right: 20px;
+        }
+
         &.swiper-button-disabled {
                 pointer-events: auto;
         }

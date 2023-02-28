@@ -58,6 +58,10 @@ if(document.querySelector('#catalog-colors')) {
     let swiperCatalogColors = new Swiper('#catalog-colors', {
         slidesPerView: 1,
         spaceBetween: 30,
+        navigation: {
+            nextEl: '.colors-swiper-button-next',
+            prevEl: '.colors-swiper-button-prev',
+          },
         breakpoints: {
             0: {
                 spaceBetween: 20,
@@ -67,33 +71,20 @@ if(document.querySelector('#catalog-colors')) {
                 spaceBetween: 20,
                 slidesPerView: 4.9,
               },
-              669.98: {
+            669.98: {
                 spaceBetween: 20,
                 slidesPerView: 5.9,
               },
             991.98: {
-              spaceBetween: 0,
+              spaceBetween: 20,
+              slidesPerView: 8,
             },
+            1099.98: {
+                spaceBetween: 20,
+                slidesPerView: 9.9,
+              },
           },
     });
-    
-    function mobSliderActiveBlockColor() {
-        let sliodes = document.querySelectorAll('#catalog-colors .catalog-colors__item');
-    
-        sliodes.forEach(item => {
-            if(window.matchMedia("(min-width: 991.98px)").matches) {
-                item.classList.remove('swiper-slide');
-                
-            } else {
-                item.classList.add('swiper-slide');
-            };
-        });
-    };
-    
-    window.addEventListener('resize', function() {
-        mobSliderActiveBlockColor();
-    });
-    mobSliderActiveBlockColor();
 }
 
 if(document.querySelector('#block-slider-big')) {

@@ -3,6 +3,7 @@
     // .catalog-item__container
 
     &__container {
+        
     }
 
     // .catalog-item__breadcrumbs
@@ -42,13 +43,46 @@
     // .catalog-item__wrapper
 
     & .catalog-item-wrapper {
+        
+        & .catalog-item-wrapper__wrapper-colors {
+            position: relative;
+            & .colors-swiper-button-prev, & .colors-swiper-button-next {
+                transform: translateY(-50%);
+                color: #000;
+                font-size: 10px;
+
+                @media screen and (max-width: 1200px) {
+                    display: none;
+                }
+            }
+
+            & .colors-swiper-button-prev::after, & .colors-swiper-button-next::after {
+                font-size: 30px;
+            }
+
+            & .colors-swiper-button-prev {
+                left: -35px;
+
+                &.swiper-button-disabled {
+                    pointer-events: auto;
+                }
+            }
+
+            & .colors-swiper-button-next {
+                right: -35px;
+
+                &.swiper-button-disabled {
+                    pointer-events: auto;
+                }
+            }
+        }
 
         // .catalog-item-wrapper__colors
     
         & .catalog-colors {
-            display: flex;
+            // display: flex;
             // justify-content: space-evenly;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
             padding: 20px 0 40px 0;
             // align-items: center;
 
@@ -60,8 +94,8 @@
             // .catalog-colors__item
         
             &__item {
-                max-width: 101px;
-                margin: 0 10px;
+                // max-width: 101px;
+                // margin: 0 10px;
                 
 
                 &:hover {
@@ -81,7 +115,7 @@
                     }
 
                     & .catalog-colors__name {
-                        font-weight: 500;
+                        font-weight: 600;
                     }
                 }
             }
@@ -138,7 +172,7 @@
             max-width: 220px;
             width: 100%;
             margin-right: 50px;
-            z-index: 21;
+            
             transition: all 0.3s;
 
             &.active {
@@ -155,7 +189,7 @@
                 padding: 20px;
                 background: #fff;
                 overflow: auto;
-                
+                z-index: 21;
             }
 
             &__btn {
@@ -276,7 +310,7 @@
             // .catalog-filter__name
         
             &__name {
-                font-weight: 500;
+                font-weight: 700;
                 font-size: 18px;
                 line-height: 33px;
                 margin-bottom: 15px;
@@ -305,12 +339,15 @@
                     }
 
                     &__link-checkbox {
+                        display: flex;
+                        align-items: center;
                         margin-right: 10px;
                         text-decoration: none;
                         color: #000;
                         position: relative;
                     
                         &.active {
+                            font-weight: 700;
                             &::before {
                                 border-color: transparent;
                                 background: rgba(227, 6, 19, 1);
@@ -577,6 +614,7 @@
                         display: flex;
                         align-items: center;
                         color: #FB868C;
+                        font-weight: 700;
 
                         & .icon-catalog-sort {
                             display: inline-block;

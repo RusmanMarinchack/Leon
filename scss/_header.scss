@@ -63,6 +63,7 @@
                 text-decoration: none;
                 color: #000;
                 font-size: 20px;
+                font-weight: 600;
                 
                 &:hover {
                     text-decoration: underline;
@@ -119,7 +120,7 @@
                         }
 
                         &.active {
-                            font-weight: 500;
+                            font-weight: 600;
                             color: rgba(227, 6, 19, 1);
                             border-color: rgba(227, 6, 19, 1);
                         }
@@ -392,6 +393,7 @@
                 line-height: 24px;
                 color: #fff;
                 background: rgba(199, 5, 17, 1);
+                font-weight: 700;
 
                 @media screen and (max-width: 1299.98px) {
                     padding: 11.5px 25px;
@@ -994,6 +996,7 @@
             text-align: center;
             color: #fff;
             z-index: 1;
+            font-family: 'TTNorms-Medium', sans-serif;
 
             @media screen and (max-width: 991.98px) {
                 width: calc(100% - 40px);
@@ -1012,6 +1015,7 @@
             font-weight: 700;
             font-size: 30px;
             line-height: 35px;
+            
 
             @media screen and (max-width: 575.98px) {
                 font-size: 24px;
@@ -1155,7 +1159,7 @@
                     overflow: auto;
 
                     &::-webkit-scrollbar {
-                        width: 7px;
+                        width: 3px;
                         margin: 0 5px;        /* width of the entire scrollbar */
                       }
                       
@@ -1198,6 +1202,9 @@
                         margin-right: 15px;
                         
                         & .name {
+                            display: block;
+                            max-height: 36px;
+                            overflow: hidden;
                             color: #000;
                             text-decoration: none;
                             margin-bottom: 3px;
@@ -1351,7 +1358,7 @@
             &__label {
                 display: block;
                 font-size: 14px;
-                font-weight: 500;
+                font-weight: 600;
             }
     
             // .actions-inner__sublabel

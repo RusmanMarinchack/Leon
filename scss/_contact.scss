@@ -35,6 +35,11 @@
             flex-direction: column;
             justify-content: center;
             padding: 40px;
+            border-right: 1px solid #A3A6B2;
+
+            @media screen and (max-width: 899.98px) {
+                border-right: none;
+            }
 
             @media screen and (max-width: 575.98px) {
                 padding: 40px 20px;
